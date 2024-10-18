@@ -1,0 +1,44 @@
+/* LoanCard.css */
+.loan-card {
+  width: 280px; /* Tamanho consistente */
+  background-color: #f7f9fc; /* Fundo suave, próximo do branco */
+  border: 2px solid #e3e6ed; /* Borda mais definida */
+  border-radius: 12px; /* Bordas levemente arredondadas */
+  padding: 20px;
+  margin: 16px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Sombra para dar a sensação de uma caixa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.loan-card:hover {
+  transform: translateY(-8px); /* Eleva um pouco quando o mouse está sobre */
+  box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.loan-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333; /* Cor mais forte para o título */
+  margin-bottom: 15px;
+}
+
+.loan-card p {
+  font-size: 16px;
+  color: #555; /* Texto mais escuro para contraste */
+  margin: 8px 0;
+}
+
+.devolvido-btn {
+  padding: 12px 20px;
+  background-color: #4caf50; /* Verde chamativo para o botão */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bordas mais arredondadas no botão */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.devolvido-btn:hover {
+  background-color: #388e3c; /* Verde mais escuro ao passar o mouse */
+}

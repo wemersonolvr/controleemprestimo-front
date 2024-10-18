@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Logout.css'; // Certifique-se de criar ou importar o arquivo CSS correto
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -14,7 +15,9 @@ const Logout = () => {
   };
 
   return (
-    <button onClick={handleLogout}>Logout</button>
+    <button onClick={handleLogout} className="logout-button">
+      <p>Logout</p>
+    </button>
   );
 };
 

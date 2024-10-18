@@ -1,0 +1,59 @@
+/* Home.css */
+.home-container {
+  display: flex;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 40px; /* Increase padding for more spacing */
+  background-color: #f0f2f5; /* Light background */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
+}
+
+.equipamentos-container, .emprestimos-container {
+  width: 100%; /* Ensure full width */
+  max-width: 1200px; /* Limit max width to keep content centered */
+  margin-top: 20px;
+}
+
+.equipamentos-grid, .emprestimos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Equal size cards */
+  gap: 30px; /* Larger gap for better spacing */
+  justify-items: center; /* Center align grid items */
+}
+
+.loan-form {
+  width: 100%;
+  max-width: 600px; /* Limit the form's max width for better alignment */
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loan-form input, .loan-form button {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.loan-form button {
+  background-color: #007bff; /* Button color matching the reference */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loan-form button:hover {
+  background-color: #0056b3;
+}

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-//import api from '../../api';
 import axios from 'axios';
+import './Login.css';
 
 function Login() {
   const [login, setLogin] = useState('');
@@ -9,14 +9,21 @@ function Login() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.body.classList.add('login-page');
+    
+    return () => {
+      document.body.classList.remove('login-page');
+    };
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post('http://localhost:3000/api/admin/login', {login, senha: password });
-        // Armazena o token e o nome do usuário no localStorage
+      const response = await axios.post('http://localhost:3000/api/admin/login', { login, senha: password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('nomeUsuario', response.data.nome);
+      localStorage.setItem('usuarioId', response.data.id);
       navigate('/home');
     } catch (err) {
       setError('Login ou senha incorretos');
@@ -49,7 +56,7 @@ function Login() {
             required
           />
         </div>
-        <button type="submit" > Entrar</button>
+        <button type="submit" className='login-btn'>Entrar</button>
         {error && <p className="error">{error}</p>}
       </form>
       <p>

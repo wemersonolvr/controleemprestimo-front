@@ -1,0 +1,14 @@
+/* Logout.css */
+.logout-button {
+    background-color: #e74c3c; /* Cor vermelha */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Suave transição ao passar o mouse */
+  }
+  
+  .logout-button:hover {
+    background-color: #c0392b; /* Vermelho mais escuro ao passar o mouse */
+  }
+  

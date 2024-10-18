@@ -1,0 +1,28 @@
+/* AcessoryCard.css */
+.acessorio-card {
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.acessorio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.acessorio-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.acessorio-card p {
+  font-size: 16px;
+  color: #666;
+}
